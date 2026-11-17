@@ -1,0 +1,20 @@
+{
+  "dut": {"WritebackStage": 1, "PMPEnable": 1, "PMPNumRegions": 4, "RV32M": "Fast", "RV32B": "None", "ICache": 0, "SecureIbex": 0},
+  "action_fields": ["words", "data_words", "events", "cycles", "reset", "memory", "target"],
+  "cycles": 256,
+  "reset_cycles": 4,
+  "reset_type": "boolean",
+  "word_format": "[aligned 32-bit address, literal 32-bit value]",
+  "event_format": {"at": "zero-based active cycle offset", "pin": "allowed pin name", "value": "integer"},
+  "event_pins": ["irq_software", "irq_timer", "irq_external", "irq_nm", "irq_fast", "debug_req"],
+  "memory_fields": ["instruction_latency", "data_latency", "instruction_errors", "data_errors"],
+  "memory_latency_range": [1, 64],
+  "memory_errors_format": "aligned address to failure-count mapping",
+  "memory_default_word": "0xc0001073",
+  "first_fetch_address": "0x00100080",
+  "debug_entry_address": "0x00100000",
+  "consecutive_target_misses": 2,
+  "instruction_categories": ["ALU", "Mul", "Div", "Branch", "Jump", "Load", "Store", "CSRAccess", "EBreakDbg", "EBreakExc", "ECall", "MRet", "DRet", "WFI", "Fence", "FenceI", "None", "FetchError", "CompressedIllegal", "UncompressedIllegal", "CSRIllegal", "PrivIllegal"],
+  "stall_categories": ["None", "Instr", "LdHz", "Mem"],
+  "privilege": {"U": 0, "M": 3}
+}

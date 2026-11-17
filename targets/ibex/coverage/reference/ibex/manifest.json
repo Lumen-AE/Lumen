@@ -1,0 +1,60 @@
+{
+  "repository": "https://github.com/lowRISC/ibex",
+  "commit": "a896ef22777a40ad3f5a2a3b97fecd5116480c4c",
+  "files": [
+    {
+      "path": "doc/03_reference/coverage_plan.rst",
+      "url": "https://raw.githubusercontent.com/lowRISC/ibex/a896ef22777a40ad3f5a2a3b97fecd5116480c4c/doc/03_reference/coverage_plan.rst",
+      "sha256": "91e5da50e98b57f210ec5bf30707fad6eae5bcf1d2949a92ec8041cb6b8bffae",
+      "bytes": 24966
+    },
+    {
+      "path": "doc/03_reference/testplan.rst",
+      "url": "https://raw.githubusercontent.com/lowRISC/ibex/a896ef22777a40ad3f5a2a3b97fecd5116480c4c/doc/03_reference/testplan.rst",
+      "sha256": "3d76e9033688ad632f5ea371ac5f0405710802732fb9c45bf2630b4c64ae79b0",
+      "bytes": 6923
+    },
+    {
+      "path": "doc/03_reference/verification.rst",
+      "url": "https://raw.githubusercontent.com/lowRISC/ibex/a896ef22777a40ad3f5a2a3b97fecd5116480c4c/doc/03_reference/verification.rst",
+      "sha256": "e8e4afb0e3350444b0bfc335064713eb421ef4bb543a6189f45aee7843796277",
+      "bytes": 13074
+    },
+    {
+      "path": "dv/uvm/core_ibex/fcov/core_ibex_csr_categories.svh",
+      "url": "https://raw.githubusercontent.com/lowRISC/ibex/a896ef22777a40ad3f5a2a3b97fecd5116480c4c/dv/uvm/core_ibex/fcov/core_ibex_csr_categories.svh",
+      "sha256": "e690a4fb50b717f1243d1096fb4ae45549e6e183718c014206c0dcd6493efe06",
+      "bytes": 2722
+    },
+    {
+      "path": "dv/uvm/core_ibex/fcov/core_ibex_fcov_bind.sv",
+      "url": "https://raw.githubusercontent.com/lowRISC/ibex/a896ef22777a40ad3f5a2a3b97fecd5116480c4c/dv/uvm/core_ibex/fcov/core_ibex_fcov_bind.sv",
+      "sha256": "aadc3ce8502daf1be233ee1b82d0c26642aef39bcc3da9b79adde140a958429b",
+      "bytes": 422
+    },
+    {
+      "path": "dv/uvm/core_ibex/fcov/core_ibex_fcov_if.sv",
+      "url": "https://raw.githubusercontent.com/lowRISC/ibex/a896ef22777a40ad3f5a2a3b97fecd5116480c4c/dv/uvm/core_ibex/fcov/core_ibex_fcov_if.sv",
+      "sha256": "11281ff8a5e9083f61081d17b3a922ba42faba9abcb4107c46a68319a11ebbb0",
+      "bytes": 36298
+    },
+    {
+      "path": "dv/uvm/core_ibex/fcov/core_ibex_pmp_fcov_if.sv",
+      "url": "https://raw.githubusercontent.com/lowRISC/ibex/a896ef22777a40ad3f5a2a3b97fecd5116480c4c/dv/uvm/core_ibex/fcov/core_ibex_pmp_fcov_if.sv",
+      "sha256": "ac60ca5607f3eb9b83b639035a66f727c906ddd8a9130b800d755419539a2d4f",
+      "bytes": 43118
+    },
+    {
+      "path": "ibex_configs.yaml",
+      "url": "https://raw.githubusercontent.com/lowRISC/ibex/a896ef22777a40ad3f5a2a3b97fecd5116480c4c/ibex_configs.yaml",
+      "sha256": "409ba9ad25c29989e157a4947ab335054d96e0f76ac3a74b0278584b40cf1fdd",
+      "bytes": 7449
+    },
+    {
+      "path": "rtl/ibex_pkg.sv",
+      "url": "https://raw.githubusercontent.com/lowRISC/ibex/a896ef22777a40ad3f5a2a3b97fecd5116480c4c/rtl/ibex_pkg.sv",
+      "sha256": "18c986c83664daee64660dab3a57796d9b6ae2cb95fd4fc76543753cfe57110e",
+      "bytes": 24000
+    }
+  ]
+}

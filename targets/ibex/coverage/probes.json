@@ -1,0 +1,1990 @@
+{
+  "schema": 1,
+  "slot_width": 32,
+  "slot_count": 247,
+  "instances": 4,
+  "definition_count": 149,
+  "type_bin_count": 3476,
+  "sources": {
+    "core_ibex_fcov_if.sv": "11281ff8a5e9083f61081d17b3a922ba42faba9abcb4107c46a68319a11ebbb0",
+    "core_ibex_pmp_fcov_if.sv": "ac60ca5607f3eb9b83b639035a66f727c906ddd8a9130b800d755419539a2d4f"
+  },
+  "probes": [
+    {
+      "slot": 0,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_id_instr_category",
+      "expression": "id_instr_category"
+    },
+    {
+      "slot": 1,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_id_instr_category_last",
+      "expression": "id_instr_category_last"
+    },
+    {
+      "slot": 2,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_stall_type_id",
+      "expression": "id_stall_type"
+    },
+    {
+      "slot": 3,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_wb_reg_no_load_hz",
+      "expression": "id_stage_i.fcov_rf_rd_wb_hz &&\n                                     !wb_stage_i.outstanding_load_wb_o"
+    },
+    {
+      "slot": 4,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_mem_raw_hz",
+      "expression": "raw_hz"
+    },
+    {
+      "slot": 5,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_mprv",
+      "expression": "cs_registers_i.mstatus_q.mprv"
+    },
+    {
+      "slot": 6,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_ls_error_exception",
+      "expression": "load_store_unit_i.fcov_ls_error_exception"
+    },
+    {
+      "slot": 7,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_ls_pmp_exception",
+      "expression": "load_store_unit_i.fcov_ls_pmp_exception"
+    },
+    {
+      "slot": 8,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_branch_taken",
+      "expression": "id_stage_i.fcov_branch_taken"
+    },
+    {
+      "slot": 9,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_branch_not_taken",
+      "expression": "id_stage_i.fcov_branch_not_taken"
+    },
+    {
+      "slot": 10,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_priv_mode_id",
+      "expression": "priv_mode_id"
+    },
+    {
+      "slot": 11,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_priv_mode_lsu",
+      "expression": "priv_mode_lsu"
+    },
+    {
+      "slot": 12,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_if_stage_state",
+      "expression": "if_stage_state"
+    },
+    {
+      "slot": 13,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_id_stage_state",
+      "expression": "id_stage_state"
+    },
+    {
+      "slot": 14,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_wb_stage_state",
+      "expression": "wb_stage_state"
+    },
+    {
+      "slot": 15,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_data_ind_timing",
+      "expression": "cs_registers_i.data_ind_timing_o"
+    },
+    {
+      "slot": 16,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_data_ind_timing_instr",
+      "expression": "id_instr_category"
+    },
+    {
+      "slot": 17,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "gate",
+      "key": "uarch_cg/cp_data_ind_timing_instr",
+      "expression": "cs_registers_i.data_ind_timing_o"
+    },
+    {
+      "slot": 18,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_dummy_instr_en",
+      "expression": "cs_registers_i.dummy_instr_en_o"
+    },
+    {
+      "slot": 19,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_dummy_instr_mask",
+      "expression": "cs_registers_i.dummy_instr_mask_o"
+    },
+    {
+      "slot": 20,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_dummy_instr_type",
+      "expression": "if_stage_i.fcov_dummy_instr_type"
+    },
+    {
+      "slot": 21,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_dummy_instr",
+      "expression": "id_instr_category"
+    },
+    {
+      "slot": 22,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "gate",
+      "key": "uarch_cg/cp_dummy_instr",
+      "expression": "cs_registers_i.dummy_instr_en_o"
+    },
+    {
+      "slot": 23,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_dummy_instr_if_stage",
+      "expression": "if_stage_i.fcov_insert_dummy_instr"
+    },
+    {
+      "slot": 24,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_dummy_instr_id_stage",
+      "expression": "if_stage_i.dummy_instr_id_o"
+    },
+    {
+      "slot": 25,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_dummy_instr_wb_stage",
+      "expression": "wb_stage_i.dummy_instr_wb_o"
+    },
+    {
+      "slot": 26,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_rf_a_ecc_err",
+      "expression": "fcov_rf_ecc_err_a_id"
+    },
+    {
+      "slot": 27,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_rf_b_ecc_err",
+      "expression": "fcov_rf_ecc_err_b_id"
+    },
+    {
+      "slot": 28,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_icache_ecc_err",
+      "expression": "if_stage_i.icache_ecc_error_o"
+    },
+    {
+      "slot": 29,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_mem_load_ecc_err",
+      "expression": "load_store_unit_i.load_resp_intg_err_o"
+    },
+    {
+      "slot": 30,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_mem_store_ecc_err",
+      "expression": "load_store_unit_i.store_resp_intg_err_o"
+    },
+    {
+      "slot": 31,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_lockstep_err",
+      "expression": "lockstep_glitch_err"
+    },
+    {
+      "slot": 32,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_rf_glitch_err",
+      "expression": "rf_glitch_err"
+    },
+    {
+      "slot": 33,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_pc_mismatch_err",
+      "expression": "if_stage_i.pc_mismatch_alert_o"
+    },
+    {
+      "slot": 34,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_fetch_enable",
+      "expression": "fetch_enable_i"
+    },
+    {
+      "slot": 35,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_mret_in_umode",
+      "expression": "id_stage_i.mret_insn_dec && priv_mode_id == PRIV_LVL_U"
+    },
+    {
+      "slot": 36,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_wfi_in_umode",
+      "expression": "id_stage_i.wfi_insn_dec && priv_mode_id == PRIV_LVL_U"
+    },
+    {
+      "slot": 37,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_warl_check_mstatus",
+      "expression": "fcov_csr_write &&\n                       (cs_registers_i.u_mstatus_csr.wr_data_i !=\n                       cs_registers_i.csr_wdata_int)"
+    },
+    {
+      "slot": 38,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_warl_check_mie",
+      "expression": "fcov_csr_write &&\n                       (cs_registers_i.u_mie_csr.wr_data_i !=\n                       cs_registers_i.csr_wdata_int)"
+    },
+    {
+      "slot": 39,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_warl_check_mtvec",
+      "expression": "fcov_csr_write &&\n                       (cs_registers_i.u_mtvec_csr.wr_data_i !=\n                       cs_registers_i.csr_wdata_int)"
+    },
+    {
+      "slot": 40,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_warl_check_mepc",
+      "expression": "fcov_csr_write &&\n                       (cs_registers_i.u_mepc_csr.wr_data_i !=\n                       cs_registers_i.csr_wdata_int)"
+    },
+    {
+      "slot": 41,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_warl_check_mtval",
+      "expression": "fcov_csr_write &&\n                       (cs_registers_i.u_mtval_csr.wr_data_i !=\n                       cs_registers_i.csr_wdata_int)"
+    },
+    {
+      "slot": 42,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_warl_check_dcsr",
+      "expression": "fcov_csr_write &&\n                       (cs_registers_i.u_dcsr_csr.wr_data_i !=\n                       cs_registers_i.csr_wdata_int)"
+    },
+    {
+      "slot": 43,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_warl_check_cpuctrl",
+      "expression": "fcov_csr_write &&\n                       (cs_registers_i.u_cpuctrlsts_part_csr.wr_data_i !=\n                       cs_registers_i.csr_wdata_int)"
+    },
+    {
+      "slot": 44,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_double_fault",
+      "expression": "cs_registers_i.cpuctrlsts_part_d.double_fault_seen"
+    },
+    {
+      "slot": 45,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_icache_enable",
+      "expression": "cs_registers_i.cpuctrlsts_part_d.icache_enable"
+    },
+    {
+      "slot": 46,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_irq_pending",
+      "expression": "id_stage_i.irq_pending_i | id_stage_i.irq_nm_i"
+    },
+    {
+      "slot": 47,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_debug_req",
+      "expression": "id_stage_i.controller_i.fcov_debug_req"
+    },
+    {
+      "slot": 48,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_csr_read_only",
+      "expression": "cs_registers_i.csr_addr_i"
+    },
+    {
+      "slot": 49,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "gate",
+      "key": "uarch_cg/cp_csr_read_only",
+      "expression": "fcov_csr_read_only"
+    },
+    {
+      "slot": 50,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_csr_write",
+      "expression": "cs_registers_i.csr_addr_i"
+    },
+    {
+      "slot": 51,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "gate",
+      "key": "uarch_cg/cp_csr_write",
+      "expression": "fcov_csr_write"
+    },
+    {
+      "slot": 52,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_csr_invalid_read_only",
+      "expression": "fcov_csr_read_only && cs_registers_i.illegal_csr"
+    },
+    {
+      "slot": 53,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_csr_invalid_write",
+      "expression": "fcov_csr_write && cs_registers_i.illegal_csr"
+    },
+    {
+      "slot": 54,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_debug_mode",
+      "expression": "debug_mode"
+    },
+    {
+      "slot": 55,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_debug_wakeup",
+      "expression": "id_stage_i.controller_i.fcov_debug_wakeup"
+    },
+    {
+      "slot": 56,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_all_debug_req",
+      "expression": "id_stage_i.controller_i.fcov_all_debug_req"
+    },
+    {
+      "slot": 57,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_debug_entry_if",
+      "expression": "id_stage_i.controller_i.fcov_debug_entry_if"
+    },
+    {
+      "slot": 58,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_debug_entry_id",
+      "expression": "id_stage_i.controller_i.fcov_debug_entry_id"
+    },
+    {
+      "slot": 59,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_pipe_flush",
+      "expression": "id_stage_i.controller_i.fcov_pipe_flush"
+    },
+    {
+      "slot": 60,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_single_step_taken",
+      "expression": "id_stage_i.controller_i.fcov_debug_single_step_taken"
+    },
+    {
+      "slot": 61,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_single_step_exception",
+      "expression": "id_stage_i.controller_i.do_single_step_d &&\n                                              id_stage_i.controller_i.fcov_pipe_flush"
+    },
+    {
+      "slot": 62,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_insn_trigger_enter_debug",
+      "expression": "instr_id_matches_trigger_q"
+    },
+    {
+      "slot": 63,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_nmi_taken",
+      "expression": "((fcov_irqs[5] || fcov_irqs[4]))"
+    },
+    {
+      "slot": 64,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "gate",
+      "key": "uarch_cg/cp_nmi_taken",
+      "expression": "id_stage_i.controller_i.fcov_interrupt_taken"
+    },
+    {
+      "slot": 65,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_interrupt_taken",
+      "expression": "fcov_irqs"
+    },
+    {
+      "slot": 66,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "gate",
+      "key": "uarch_cg/cp_interrupt_taken",
+      "expression": "id_stage_i.controller_i.fcov_interrupt_taken"
+    },
+    {
+      "slot": 67,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_controller_fsm",
+      "expression": "id_stage_i.controller_i.ctrl_fsm_cs"
+    },
+    {
+      "slot": 68,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_controller_fsm_sleep",
+      "expression": "id_stage_i.controller_i.ctrl_fsm_cs"
+    },
+    {
+      "slot": 69,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_irq_continue_sleep",
+      "expression": "kept_wfi_with_irq"
+    },
+    {
+      "slot": 70,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_single_step_instr",
+      "expression": "id_instr_category"
+    },
+    {
+      "slot": 71,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "gate",
+      "key": "uarch_cg/cp_single_step_instr",
+      "expression": "id_stage_i.controller_i.fcov_debug_single_step_taken"
+    },
+    {
+      "slot": 72,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_misaligned_first_data_bus_err",
+      "expression": "load_store_unit_i.fcov_mis_bus_err_1_q"
+    },
+    {
+      "slot": 73,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "gate",
+      "key": "uarch_cg/cp_misaligned_first_data_bus_err",
+      "expression": "load_store_unit_i.fcov_mis_rvalid_2"
+    },
+    {
+      "slot": 74,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_misaligned_second_data_bus_err",
+      "expression": "load_store_unit_i.data_bus_err_i"
+    },
+    {
+      "slot": 75,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "gate",
+      "key": "uarch_cg/cp_misaligned_second_data_bus_err",
+      "expression": "load_store_unit_i.fcov_mis_rvalid_2"
+    },
+    {
+      "slot": 76,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_imem_response_latency",
+      "expression": "imem_single_cycle_response"
+    },
+    {
+      "slot": 77,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "gate",
+      "key": "uarch_cg/cp_imem_response_latency",
+      "expression": "instr_rvalid_i"
+    },
+    {
+      "slot": 78,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_imem_req_gnt_rvalid",
+      "expression": "instr_rvalid_i & instr_req_o & instr_gnt_i"
+    },
+    {
+      "slot": 79,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_dmem_response_latency",
+      "expression": "dmem_single_cycle_response"
+    },
+    {
+      "slot": 80,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "gate",
+      "key": "uarch_cg/cp_dmem_response_latency",
+      "expression": "data_rvalid_i"
+    },
+    {
+      "slot": 81,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_dmem_req_gnt_rvalid",
+      "expression": "data_rvalid_i & data_req_o & data_gnt_i"
+    },
+    {
+      "slot": 82,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "id_stage_i.instr_fetch_err_i",
+      "expression": "id_stage_i.instr_fetch_err_i"
+    },
+    {
+      "slot": 83,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "id_stage_i.instr_fetch_err_plus2_i",
+      "expression": "id_stage_i.instr_fetch_err_plus2_i"
+    },
+    {
+      "slot": 84,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cs_registers_i.mstatus_q.mie",
+      "expression": "cs_registers_i.mstatus_q.mie"
+    },
+    {
+      "slot": 85,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "gate",
+      "key": "uarch_cg/irq_wfi_cross",
+      "expression": "id_stage_i.irq_pending_i | id_stage_i.irq_nm_i"
+    },
+    {
+      "slot": 86,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "gate",
+      "key": "uarch_cg/debug_wfi_cross",
+      "expression": "id_stage_i.controller_i.fcov_all_debug_req"
+    },
+    {
+      "slot": 87,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "wb_stage_state",
+      "expression": "wb_stage_state"
+    },
+    {
+      "slot": 88,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "instr_unstalled_last",
+      "expression": "instr_unstalled_last"
+    },
+    {
+      "slot": 89,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "gate",
+      "key": "uarch_cg/interrupt_taken_instr_cross",
+      "expression": "id_stage_i.controller_i.fcov_interrupt_taken"
+    },
+    {
+      "slot": 90,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "instr_unstalled",
+      "expression": "instr_unstalled"
+    },
+    {
+      "slot": 91,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "gate",
+      "key": "uarch_cg/dummy_instr_config_cross",
+      "expression": "cs_registers_i.dummy_instr_en_o"
+    },
+    {
+      "slot": 92,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "fcov_rf_ecc_err_a_id",
+      "expression": "fcov_rf_ecc_err_a_id"
+    },
+    {
+      "slot": 93,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "fcov_rf_ecc_err_b_id",
+      "expression": "fcov_rf_ecc_err_b_id"
+    },
+    {
+      "slot": 94,
+      "group": "uarch_cg",
+      "instance": null,
+      "kind": "gate",
+      "key": "uarch_cg/rf_ecc_err_cross",
+      "expression": "id_stage_i.instr_valid_i"
+    },
+    {
+      "slot": 95,
+      "group": "pmp_region_cg",
+      "instance": 0,
+      "kind": "value",
+      "key": "cp_napot_addr_modes",
+      "expression": "$clog2(pmp_addr_napot_valid[i_region])"
+    },
+    {
+      "slot": 96,
+      "group": "pmp_region_cg",
+      "instance": 0,
+      "kind": "gate",
+      "key": "pmp_region_cg/cp_napot_addr_modes",
+      "expression": "$onehot(pmp_addr_napot_valid[i_region])"
+    },
+    {
+      "slot": 97,
+      "group": "pmp_region_cg",
+      "instance": 0,
+      "kind": "value",
+      "key": "cp_warl_check_pmpcfg",
+      "expression": "g_pmp_fcov_signals.g_pmp_region_fcov[i_region].fcov_warl_check_pmpcfg"
+    },
+    {
+      "slot": 98,
+      "group": "pmp_region_cg",
+      "instance": 0,
+      "kind": "value",
+      "key": "cp_region_mode",
+      "expression": "csr_pmp_cfg[i_region].mode"
+    },
+    {
+      "slot": 99,
+      "group": "pmp_region_cg",
+      "instance": 0,
+      "kind": "value",
+      "key": "cp_region_priv_bits",
+      "expression": "pmp_region_priv_bits"
+    },
+    {
+      "slot": 100,
+      "group": "pmp_region_cg",
+      "instance": 0,
+      "kind": "value",
+      "key": "cp_priv_lvl_iside",
+      "expression": "g_pmp.pmp_priv_lvl[PMP_I]"
+    },
+    {
+      "slot": 101,
+      "group": "pmp_region_cg",
+      "instance": 0,
+      "kind": "value",
+      "key": "cp_req_type_iside",
+      "expression": "g_pmp.pmp_req_type[PMP_I]"
+    },
+    {
+      "slot": 102,
+      "group": "pmp_region_cg",
+      "instance": 0,
+      "kind": "value",
+      "key": "cp_priv_lvl_iside2",
+      "expression": "g_pmp.pmp_priv_lvl[PMP_I2]"
+    },
+    {
+      "slot": 103,
+      "group": "pmp_region_cg",
+      "instance": 0,
+      "kind": "value",
+      "key": "cp_req_type_iside2",
+      "expression": "g_pmp.pmp_req_type[PMP_I2]"
+    },
+    {
+      "slot": 104,
+      "group": "pmp_region_cg",
+      "instance": 0,
+      "kind": "value",
+      "key": "cp_priv_lvl_dside",
+      "expression": "g_pmp.pmp_priv_lvl[PMP_D]"
+    },
+    {
+      "slot": 105,
+      "group": "pmp_region_cg",
+      "instance": 0,
+      "kind": "value",
+      "key": "cp_req_type_dside",
+      "expression": "g_pmp.pmp_req_type[PMP_D]"
+    },
+    {
+      "slot": 106,
+      "group": "pmp_region_cg",
+      "instance": 0,
+      "kind": "value",
+      "key": "cp_edit_locked_pmpcfg",
+      "expression": "fcov_csr_write &&\n          csr_pmp_cfg[i_region].lock &&\n          cs_registers_i.g_pmp_registers.g_pmp_csrs[i_region].u_pmp_cfg_csr.wr_en_i &&\n          csr_pmp_mseccfg.rlb"
+    },
+    {
+      "slot": 107,
+      "group": "pmp_region_cg",
+      "instance": 0,
+      "kind": "value",
+      "key": "cp_edit_locked_pmpaddr",
+      "expression": "fcov_csr_write &&\n          csr_pmp_cfg[i_region].lock &&\n          cs_registers_i.g_pmp_registers.g_pmp_csrs[i_region].u_pmp_addr_csr.wr_en_i &&\n          csr_pmp_mseccfg.rlb"
+    },
+    {
+      "slot": 108,
+      "group": "pmp_region_cg",
+      "instance": 0,
+      "kind": "value",
+      "key": "pmp_iside_req_err",
+      "expression": "pmp_iside_req_err"
+    },
+    {
+      "slot": 109,
+      "group": "pmp_region_cg",
+      "instance": 0,
+      "kind": "gate",
+      "key": "pmp_region_cg/pmp_iside_mode_cross",
+      "expression": "g_pmp_fcov_signals.g_pmp_region_fcov[i_region].fcov_pmp_region_ichan_access"
+    },
+    {
+      "slot": 110,
+      "group": "pmp_region_cg",
+      "instance": 0,
+      "kind": "value",
+      "key": "pmp_iside2_req_err",
+      "expression": "pmp_iside2_req_err"
+    },
+    {
+      "slot": 111,
+      "group": "pmp_region_cg",
+      "instance": 0,
+      "kind": "gate",
+      "key": "pmp_region_cg/pmp_iside2_mode_cross",
+      "expression": "g_pmp_fcov_signals.g_pmp_region_fcov[i_region].fcov_pmp_region_ichan2_access"
+    },
+    {
+      "slot": 112,
+      "group": "pmp_region_cg",
+      "instance": 0,
+      "kind": "value",
+      "key": "pmp_dside_req_err",
+      "expression": "pmp_dside_req_err"
+    },
+    {
+      "slot": 113,
+      "group": "pmp_region_cg",
+      "instance": 0,
+      "kind": "gate",
+      "key": "pmp_region_cg/pmp_dside_mode_cross",
+      "expression": "g_pmp_fcov_signals.g_pmp_region_fcov[i_region].fcov_pmp_region_dchan_access"
+    },
+    {
+      "slot": 114,
+      "group": "pmp_region_cg",
+      "instance": 0,
+      "kind": "gate",
+      "key": "pmp_region_cg/pmp_iside_priv_bits_cross",
+      "expression": "g_pmp_fcov_signals.g_pmp_region_fcov[i_region].fcov_pmp_region_ichan_access &&\n                 g_pmp_fcov_signals.fcov_pmp_region_ichan_priority[i_region]                 &&\n                 csr_pmp_cfg[i_region].mode != PMP_MODE_OFF                                  &&\n                 !(fcov_access_attempted_into_dm[PMP_I])"
+    },
+    {
+      "slot": 115,
+      "group": "pmp_region_cg",
+      "instance": 0,
+      "kind": "gate",
+      "key": "pmp_region_cg/pmp_iside2_priv_bits_cross",
+      "expression": "g_pmp_fcov_signals.g_pmp_region_fcov[i_region].fcov_pmp_region_ichan2_access &&\n                 g_pmp_fcov_signals.fcov_pmp_region_ichan2_priority[i_region]                 &&\n                 csr_pmp_cfg[i_region].mode != PMP_MODE_OFF                                   &&\n                   !(fcov_access_attempted_into_dm[PMP_I2])"
+    },
+    {
+      "slot": 116,
+      "group": "pmp_region_cg",
+      "instance": 0,
+      "kind": "gate",
+      "key": "pmp_region_cg/pmp_dside_priv_bits_cross",
+      "expression": "g_pmp_fcov_signals.g_pmp_region_fcov[i_region].fcov_pmp_region_dchan_access &&\n                 g_pmp_fcov_signals.fcov_pmp_region_dchan_priority[i_region]                 &&\n                 csr_pmp_cfg[i_region].mode != PMP_MODE_OFF                                  &&\n                 !(fcov_access_attempted_into_dm[PMP_D])"
+    },
+    {
+      "slot": 117,
+      "group": "pmp_region_cg",
+      "instance": 0,
+      "kind": "value",
+      "key": "pmp_region_priv_bits",
+      "expression": "pmp_region_priv_bits"
+    },
+    {
+      "slot": 118,
+      "group": "pmp_region_cg",
+      "instance": 0,
+      "kind": "value",
+      "key": "pmp_region_priv_bits_wr",
+      "expression": "pmp_region_priv_bits_wr"
+    },
+    {
+      "slot": 119,
+      "group": "pmp_region_cg",
+      "instance": 0,
+      "kind": "value",
+      "key": "csr_pmp_mseccfg.rlb",
+      "expression": "csr_pmp_mseccfg.rlb"
+    },
+    {
+      "slot": 120,
+      "group": "pmp_region_cg",
+      "instance": 0,
+      "kind": "gate",
+      "key": "pmp_region_cg/pmp_wr_exec_region",
+      "expression": "fcov_csr_write &&\n             csr_pmp_mseccfg.mml &&\n             cs_registers_i.csr_we_int &&\n             cs_registers_i.csr_addr == (CSR_OFF_PMP_CFG + (i_region[11:0] >> 2)) &&\n             ((!pmp_region_priv_bits[2] && pmp_region_priv_bits != MML_XM_XU) ||\n              pmp_region_priv_bits inside {MML_WRM_WRU, MML_RM_RU})"
+    },
+    {
+      "slot": 121,
+      "group": "pmp_region_cg",
+      "instance": 1,
+      "kind": "value",
+      "key": "cp_napot_addr_modes",
+      "expression": "$clog2(pmp_addr_napot_valid[i_region])"
+    },
+    {
+      "slot": 122,
+      "group": "pmp_region_cg",
+      "instance": 1,
+      "kind": "gate",
+      "key": "pmp_region_cg/cp_napot_addr_modes",
+      "expression": "$onehot(pmp_addr_napot_valid[i_region])"
+    },
+    {
+      "slot": 123,
+      "group": "pmp_region_cg",
+      "instance": 1,
+      "kind": "value",
+      "key": "cp_warl_check_pmpcfg",
+      "expression": "g_pmp_fcov_signals.g_pmp_region_fcov[i_region].fcov_warl_check_pmpcfg"
+    },
+    {
+      "slot": 124,
+      "group": "pmp_region_cg",
+      "instance": 1,
+      "kind": "value",
+      "key": "cp_region_mode",
+      "expression": "csr_pmp_cfg[i_region].mode"
+    },
+    {
+      "slot": 125,
+      "group": "pmp_region_cg",
+      "instance": 1,
+      "kind": "value",
+      "key": "cp_region_priv_bits",
+      "expression": "pmp_region_priv_bits"
+    },
+    {
+      "slot": 126,
+      "group": "pmp_region_cg",
+      "instance": 1,
+      "kind": "value",
+      "key": "cp_priv_lvl_iside",
+      "expression": "g_pmp.pmp_priv_lvl[PMP_I]"
+    },
+    {
+      "slot": 127,
+      "group": "pmp_region_cg",
+      "instance": 1,
+      "kind": "value",
+      "key": "cp_req_type_iside",
+      "expression": "g_pmp.pmp_req_type[PMP_I]"
+    },
+    {
+      "slot": 128,
+      "group": "pmp_region_cg",
+      "instance": 1,
+      "kind": "value",
+      "key": "cp_priv_lvl_iside2",
+      "expression": "g_pmp.pmp_priv_lvl[PMP_I2]"
+    },
+    {
+      "slot": 129,
+      "group": "pmp_region_cg",
+      "instance": 1,
+      "kind": "value",
+      "key": "cp_req_type_iside2",
+      "expression": "g_pmp.pmp_req_type[PMP_I2]"
+    },
+    {
+      "slot": 130,
+      "group": "pmp_region_cg",
+      "instance": 1,
+      "kind": "value",
+      "key": "cp_priv_lvl_dside",
+      "expression": "g_pmp.pmp_priv_lvl[PMP_D]"
+    },
+    {
+      "slot": 131,
+      "group": "pmp_region_cg",
+      "instance": 1,
+      "kind": "value",
+      "key": "cp_req_type_dside",
+      "expression": "g_pmp.pmp_req_type[PMP_D]"
+    },
+    {
+      "slot": 132,
+      "group": "pmp_region_cg",
+      "instance": 1,
+      "kind": "value",
+      "key": "cp_edit_locked_pmpcfg",
+      "expression": "fcov_csr_write &&\n          csr_pmp_cfg[i_region].lock &&\n          cs_registers_i.g_pmp_registers.g_pmp_csrs[i_region].u_pmp_cfg_csr.wr_en_i &&\n          csr_pmp_mseccfg.rlb"
+    },
+    {
+      "slot": 133,
+      "group": "pmp_region_cg",
+      "instance": 1,
+      "kind": "value",
+      "key": "cp_edit_locked_pmpaddr",
+      "expression": "fcov_csr_write &&\n          csr_pmp_cfg[i_region].lock &&\n          cs_registers_i.g_pmp_registers.g_pmp_csrs[i_region].u_pmp_addr_csr.wr_en_i &&\n          csr_pmp_mseccfg.rlb"
+    },
+    {
+      "slot": 134,
+      "group": "pmp_region_cg",
+      "instance": 1,
+      "kind": "value",
+      "key": "pmp_iside_req_err",
+      "expression": "pmp_iside_req_err"
+    },
+    {
+      "slot": 135,
+      "group": "pmp_region_cg",
+      "instance": 1,
+      "kind": "gate",
+      "key": "pmp_region_cg/pmp_iside_mode_cross",
+      "expression": "g_pmp_fcov_signals.g_pmp_region_fcov[i_region].fcov_pmp_region_ichan_access"
+    },
+    {
+      "slot": 136,
+      "group": "pmp_region_cg",
+      "instance": 1,
+      "kind": "value",
+      "key": "pmp_iside2_req_err",
+      "expression": "pmp_iside2_req_err"
+    },
+    {
+      "slot": 137,
+      "group": "pmp_region_cg",
+      "instance": 1,
+      "kind": "gate",
+      "key": "pmp_region_cg/pmp_iside2_mode_cross",
+      "expression": "g_pmp_fcov_signals.g_pmp_region_fcov[i_region].fcov_pmp_region_ichan2_access"
+    },
+    {
+      "slot": 138,
+      "group": "pmp_region_cg",
+      "instance": 1,
+      "kind": "value",
+      "key": "pmp_dside_req_err",
+      "expression": "pmp_dside_req_err"
+    },
+    {
+      "slot": 139,
+      "group": "pmp_region_cg",
+      "instance": 1,
+      "kind": "gate",
+      "key": "pmp_region_cg/pmp_dside_mode_cross",
+      "expression": "g_pmp_fcov_signals.g_pmp_region_fcov[i_region].fcov_pmp_region_dchan_access"
+    },
+    {
+      "slot": 140,
+      "group": "pmp_region_cg",
+      "instance": 1,
+      "kind": "gate",
+      "key": "pmp_region_cg/pmp_iside_priv_bits_cross",
+      "expression": "g_pmp_fcov_signals.g_pmp_region_fcov[i_region].fcov_pmp_region_ichan_access &&\n                 g_pmp_fcov_signals.fcov_pmp_region_ichan_priority[i_region]                 &&\n                 csr_pmp_cfg[i_region].mode != PMP_MODE_OFF                                  &&\n                 !(fcov_access_attempted_into_dm[PMP_I])"
+    },
+    {
+      "slot": 141,
+      "group": "pmp_region_cg",
+      "instance": 1,
+      "kind": "gate",
+      "key": "pmp_region_cg/pmp_iside2_priv_bits_cross",
+      "expression": "g_pmp_fcov_signals.g_pmp_region_fcov[i_region].fcov_pmp_region_ichan2_access &&\n                 g_pmp_fcov_signals.fcov_pmp_region_ichan2_priority[i_region]                 &&\n                 csr_pmp_cfg[i_region].mode != PMP_MODE_OFF                                   &&\n                   !(fcov_access_attempted_into_dm[PMP_I2])"
+    },
+    {
+      "slot": 142,
+      "group": "pmp_region_cg",
+      "instance": 1,
+      "kind": "gate",
+      "key": "pmp_region_cg/pmp_dside_priv_bits_cross",
+      "expression": "g_pmp_fcov_signals.g_pmp_region_fcov[i_region].fcov_pmp_region_dchan_access &&\n                 g_pmp_fcov_signals.fcov_pmp_region_dchan_priority[i_region]                 &&\n                 csr_pmp_cfg[i_region].mode != PMP_MODE_OFF                                  &&\n                 !(fcov_access_attempted_into_dm[PMP_D])"
+    },
+    {
+      "slot": 143,
+      "group": "pmp_region_cg",
+      "instance": 1,
+      "kind": "value",
+      "key": "pmp_region_priv_bits",
+      "expression": "pmp_region_priv_bits"
+    },
+    {
+      "slot": 144,
+      "group": "pmp_region_cg",
+      "instance": 1,
+      "kind": "value",
+      "key": "pmp_region_priv_bits_wr",
+      "expression": "pmp_region_priv_bits_wr"
+    },
+    {
+      "slot": 145,
+      "group": "pmp_region_cg",
+      "instance": 1,
+      "kind": "value",
+      "key": "csr_pmp_mseccfg.rlb",
+      "expression": "csr_pmp_mseccfg.rlb"
+    },
+    {
+      "slot": 146,
+      "group": "pmp_region_cg",
+      "instance": 1,
+      "kind": "gate",
+      "key": "pmp_region_cg/pmp_wr_exec_region",
+      "expression": "fcov_csr_write &&\n             csr_pmp_mseccfg.mml &&\n             cs_registers_i.csr_we_int &&\n             cs_registers_i.csr_addr == (CSR_OFF_PMP_CFG + (i_region[11:0] >> 2)) &&\n             ((!pmp_region_priv_bits[2] && pmp_region_priv_bits != MML_XM_XU) ||\n              pmp_region_priv_bits inside {MML_WRM_WRU, MML_RM_RU})"
+    },
+    {
+      "slot": 147,
+      "group": "pmp_region_cg",
+      "instance": 2,
+      "kind": "value",
+      "key": "cp_napot_addr_modes",
+      "expression": "$clog2(pmp_addr_napot_valid[i_region])"
+    },
+    {
+      "slot": 148,
+      "group": "pmp_region_cg",
+      "instance": 2,
+      "kind": "gate",
+      "key": "pmp_region_cg/cp_napot_addr_modes",
+      "expression": "$onehot(pmp_addr_napot_valid[i_region])"
+    },
+    {
+      "slot": 149,
+      "group": "pmp_region_cg",
+      "instance": 2,
+      "kind": "value",
+      "key": "cp_warl_check_pmpcfg",
+      "expression": "g_pmp_fcov_signals.g_pmp_region_fcov[i_region].fcov_warl_check_pmpcfg"
+    },
+    {
+      "slot": 150,
+      "group": "pmp_region_cg",
+      "instance": 2,
+      "kind": "value",
+      "key": "cp_region_mode",
+      "expression": "csr_pmp_cfg[i_region].mode"
+    },
+    {
+      "slot": 151,
+      "group": "pmp_region_cg",
+      "instance": 2,
+      "kind": "value",
+      "key": "cp_region_priv_bits",
+      "expression": "pmp_region_priv_bits"
+    },
+    {
+      "slot": 152,
+      "group": "pmp_region_cg",
+      "instance": 2,
+      "kind": "value",
+      "key": "cp_priv_lvl_iside",
+      "expression": "g_pmp.pmp_priv_lvl[PMP_I]"
+    },
+    {
+      "slot": 153,
+      "group": "pmp_region_cg",
+      "instance": 2,
+      "kind": "value",
+      "key": "cp_req_type_iside",
+      "expression": "g_pmp.pmp_req_type[PMP_I]"
+    },
+    {
+      "slot": 154,
+      "group": "pmp_region_cg",
+      "instance": 2,
+      "kind": "value",
+      "key": "cp_priv_lvl_iside2",
+      "expression": "g_pmp.pmp_priv_lvl[PMP_I2]"
+    },
+    {
+      "slot": 155,
+      "group": "pmp_region_cg",
+      "instance": 2,
+      "kind": "value",
+      "key": "cp_req_type_iside2",
+      "expression": "g_pmp.pmp_req_type[PMP_I2]"
+    },
+    {
+      "slot": 156,
+      "group": "pmp_region_cg",
+      "instance": 2,
+      "kind": "value",
+      "key": "cp_priv_lvl_dside",
+      "expression": "g_pmp.pmp_priv_lvl[PMP_D]"
+    },
+    {
+      "slot": 157,
+      "group": "pmp_region_cg",
+      "instance": 2,
+      "kind": "value",
+      "key": "cp_req_type_dside",
+      "expression": "g_pmp.pmp_req_type[PMP_D]"
+    },
+    {
+      "slot": 158,
+      "group": "pmp_region_cg",
+      "instance": 2,
+      "kind": "value",
+      "key": "cp_edit_locked_pmpcfg",
+      "expression": "fcov_csr_write &&\n          csr_pmp_cfg[i_region].lock &&\n          cs_registers_i.g_pmp_registers.g_pmp_csrs[i_region].u_pmp_cfg_csr.wr_en_i &&\n          csr_pmp_mseccfg.rlb"
+    },
+    {
+      "slot": 159,
+      "group": "pmp_region_cg",
+      "instance": 2,
+      "kind": "value",
+      "key": "cp_edit_locked_pmpaddr",
+      "expression": "fcov_csr_write &&\n          csr_pmp_cfg[i_region].lock &&\n          cs_registers_i.g_pmp_registers.g_pmp_csrs[i_region].u_pmp_addr_csr.wr_en_i &&\n          csr_pmp_mseccfg.rlb"
+    },
+    {
+      "slot": 160,
+      "group": "pmp_region_cg",
+      "instance": 2,
+      "kind": "value",
+      "key": "pmp_iside_req_err",
+      "expression": "pmp_iside_req_err"
+    },
+    {
+      "slot": 161,
+      "group": "pmp_region_cg",
+      "instance": 2,
+      "kind": "gate",
+      "key": "pmp_region_cg/pmp_iside_mode_cross",
+      "expression": "g_pmp_fcov_signals.g_pmp_region_fcov[i_region].fcov_pmp_region_ichan_access"
+    },
+    {
+      "slot": 162,
+      "group": "pmp_region_cg",
+      "instance": 2,
+      "kind": "value",
+      "key": "pmp_iside2_req_err",
+      "expression": "pmp_iside2_req_err"
+    },
+    {
+      "slot": 163,
+      "group": "pmp_region_cg",
+      "instance": 2,
+      "kind": "gate",
+      "key": "pmp_region_cg/pmp_iside2_mode_cross",
+      "expression": "g_pmp_fcov_signals.g_pmp_region_fcov[i_region].fcov_pmp_region_ichan2_access"
+    },
+    {
+      "slot": 164,
+      "group": "pmp_region_cg",
+      "instance": 2,
+      "kind": "value",
+      "key": "pmp_dside_req_err",
+      "expression": "pmp_dside_req_err"
+    },
+    {
+      "slot": 165,
+      "group": "pmp_region_cg",
+      "instance": 2,
+      "kind": "gate",
+      "key": "pmp_region_cg/pmp_dside_mode_cross",
+      "expression": "g_pmp_fcov_signals.g_pmp_region_fcov[i_region].fcov_pmp_region_dchan_access"
+    },
+    {
+      "slot": 166,
+      "group": "pmp_region_cg",
+      "instance": 2,
+      "kind": "gate",
+      "key": "pmp_region_cg/pmp_iside_priv_bits_cross",
+      "expression": "g_pmp_fcov_signals.g_pmp_region_fcov[i_region].fcov_pmp_region_ichan_access &&\n                 g_pmp_fcov_signals.fcov_pmp_region_ichan_priority[i_region]                 &&\n                 csr_pmp_cfg[i_region].mode != PMP_MODE_OFF                                  &&\n                 !(fcov_access_attempted_into_dm[PMP_I])"
+    },
+    {
+      "slot": 167,
+      "group": "pmp_region_cg",
+      "instance": 2,
+      "kind": "gate",
+      "key": "pmp_region_cg/pmp_iside2_priv_bits_cross",
+      "expression": "g_pmp_fcov_signals.g_pmp_region_fcov[i_region].fcov_pmp_region_ichan2_access &&\n                 g_pmp_fcov_signals.fcov_pmp_region_ichan2_priority[i_region]                 &&\n                 csr_pmp_cfg[i_region].mode != PMP_MODE_OFF                                   &&\n                   !(fcov_access_attempted_into_dm[PMP_I2])"
+    },
+    {
+      "slot": 168,
+      "group": "pmp_region_cg",
+      "instance": 2,
+      "kind": "gate",
+      "key": "pmp_region_cg/pmp_dside_priv_bits_cross",
+      "expression": "g_pmp_fcov_signals.g_pmp_region_fcov[i_region].fcov_pmp_region_dchan_access &&\n                 g_pmp_fcov_signals.fcov_pmp_region_dchan_priority[i_region]                 &&\n                 csr_pmp_cfg[i_region].mode != PMP_MODE_OFF                                  &&\n                 !(fcov_access_attempted_into_dm[PMP_D])"
+    },
+    {
+      "slot": 169,
+      "group": "pmp_region_cg",
+      "instance": 2,
+      "kind": "value",
+      "key": "pmp_region_priv_bits",
+      "expression": "pmp_region_priv_bits"
+    },
+    {
+      "slot": 170,
+      "group": "pmp_region_cg",
+      "instance": 2,
+      "kind": "value",
+      "key": "pmp_region_priv_bits_wr",
+      "expression": "pmp_region_priv_bits_wr"
+    },
+    {
+      "slot": 171,
+      "group": "pmp_region_cg",
+      "instance": 2,
+      "kind": "value",
+      "key": "csr_pmp_mseccfg.rlb",
+      "expression": "csr_pmp_mseccfg.rlb"
+    },
+    {
+      "slot": 172,
+      "group": "pmp_region_cg",
+      "instance": 2,
+      "kind": "gate",
+      "key": "pmp_region_cg/pmp_wr_exec_region",
+      "expression": "fcov_csr_write &&\n             csr_pmp_mseccfg.mml &&\n             cs_registers_i.csr_we_int &&\n             cs_registers_i.csr_addr == (CSR_OFF_PMP_CFG + (i_region[11:0] >> 2)) &&\n             ((!pmp_region_priv_bits[2] && pmp_region_priv_bits != MML_XM_XU) ||\n              pmp_region_priv_bits inside {MML_WRM_WRU, MML_RM_RU})"
+    },
+    {
+      "slot": 173,
+      "group": "pmp_region_cg",
+      "instance": 3,
+      "kind": "value",
+      "key": "cp_napot_addr_modes",
+      "expression": "$clog2(pmp_addr_napot_valid[i_region])"
+    },
+    {
+      "slot": 174,
+      "group": "pmp_region_cg",
+      "instance": 3,
+      "kind": "gate",
+      "key": "pmp_region_cg/cp_napot_addr_modes",
+      "expression": "$onehot(pmp_addr_napot_valid[i_region])"
+    },
+    {
+      "slot": 175,
+      "group": "pmp_region_cg",
+      "instance": 3,
+      "kind": "value",
+      "key": "cp_warl_check_pmpcfg",
+      "expression": "g_pmp_fcov_signals.g_pmp_region_fcov[i_region].fcov_warl_check_pmpcfg"
+    },
+    {
+      "slot": 176,
+      "group": "pmp_region_cg",
+      "instance": 3,
+      "kind": "value",
+      "key": "cp_region_mode",
+      "expression": "csr_pmp_cfg[i_region].mode"
+    },
+    {
+      "slot": 177,
+      "group": "pmp_region_cg",
+      "instance": 3,
+      "kind": "value",
+      "key": "cp_region_priv_bits",
+      "expression": "pmp_region_priv_bits"
+    },
+    {
+      "slot": 178,
+      "group": "pmp_region_cg",
+      "instance": 3,
+      "kind": "value",
+      "key": "cp_priv_lvl_iside",
+      "expression": "g_pmp.pmp_priv_lvl[PMP_I]"
+    },
+    {
+      "slot": 179,
+      "group": "pmp_region_cg",
+      "instance": 3,
+      "kind": "value",
+      "key": "cp_req_type_iside",
+      "expression": "g_pmp.pmp_req_type[PMP_I]"
+    },
+    {
+      "slot": 180,
+      "group": "pmp_region_cg",
+      "instance": 3,
+      "kind": "value",
+      "key": "cp_priv_lvl_iside2",
+      "expression": "g_pmp.pmp_priv_lvl[PMP_I2]"
+    },
+    {
+      "slot": 181,
+      "group": "pmp_region_cg",
+      "instance": 3,
+      "kind": "value",
+      "key": "cp_req_type_iside2",
+      "expression": "g_pmp.pmp_req_type[PMP_I2]"
+    },
+    {
+      "slot": 182,
+      "group": "pmp_region_cg",
+      "instance": 3,
+      "kind": "value",
+      "key": "cp_priv_lvl_dside",
+      "expression": "g_pmp.pmp_priv_lvl[PMP_D]"
+    },
+    {
+      "slot": 183,
+      "group": "pmp_region_cg",
+      "instance": 3,
+      "kind": "value",
+      "key": "cp_req_type_dside",
+      "expression": "g_pmp.pmp_req_type[PMP_D]"
+    },
+    {
+      "slot": 184,
+      "group": "pmp_region_cg",
+      "instance": 3,
+      "kind": "value",
+      "key": "cp_edit_locked_pmpcfg",
+      "expression": "fcov_csr_write &&\n          csr_pmp_cfg[i_region].lock &&\n          cs_registers_i.g_pmp_registers.g_pmp_csrs[i_region].u_pmp_cfg_csr.wr_en_i &&\n          csr_pmp_mseccfg.rlb"
+    },
+    {
+      "slot": 185,
+      "group": "pmp_region_cg",
+      "instance": 3,
+      "kind": "value",
+      "key": "cp_edit_locked_pmpaddr",
+      "expression": "fcov_csr_write &&\n          csr_pmp_cfg[i_region].lock &&\n          cs_registers_i.g_pmp_registers.g_pmp_csrs[i_region].u_pmp_addr_csr.wr_en_i &&\n          csr_pmp_mseccfg.rlb"
+    },
+    {
+      "slot": 186,
+      "group": "pmp_region_cg",
+      "instance": 3,
+      "kind": "value",
+      "key": "pmp_iside_req_err",
+      "expression": "pmp_iside_req_err"
+    },
+    {
+      "slot": 187,
+      "group": "pmp_region_cg",
+      "instance": 3,
+      "kind": "gate",
+      "key": "pmp_region_cg/pmp_iside_mode_cross",
+      "expression": "g_pmp_fcov_signals.g_pmp_region_fcov[i_region].fcov_pmp_region_ichan_access"
+    },
+    {
+      "slot": 188,
+      "group": "pmp_region_cg",
+      "instance": 3,
+      "kind": "value",
+      "key": "pmp_iside2_req_err",
+      "expression": "pmp_iside2_req_err"
+    },
+    {
+      "slot": 189,
+      "group": "pmp_region_cg",
+      "instance": 3,
+      "kind": "gate",
+      "key": "pmp_region_cg/pmp_iside2_mode_cross",
+      "expression": "g_pmp_fcov_signals.g_pmp_region_fcov[i_region].fcov_pmp_region_ichan2_access"
+    },
+    {
+      "slot": 190,
+      "group": "pmp_region_cg",
+      "instance": 3,
+      "kind": "value",
+      "key": "pmp_dside_req_err",
+      "expression": "pmp_dside_req_err"
+    },
+    {
+      "slot": 191,
+      "group": "pmp_region_cg",
+      "instance": 3,
+      "kind": "gate",
+      "key": "pmp_region_cg/pmp_dside_mode_cross",
+      "expression": "g_pmp_fcov_signals.g_pmp_region_fcov[i_region].fcov_pmp_region_dchan_access"
+    },
+    {
+      "slot": 192,
+      "group": "pmp_region_cg",
+      "instance": 3,
+      "kind": "gate",
+      "key": "pmp_region_cg/pmp_iside_priv_bits_cross",
+      "expression": "g_pmp_fcov_signals.g_pmp_region_fcov[i_region].fcov_pmp_region_ichan_access &&\n                 g_pmp_fcov_signals.fcov_pmp_region_ichan_priority[i_region]                 &&\n                 csr_pmp_cfg[i_region].mode != PMP_MODE_OFF                                  &&\n                 !(fcov_access_attempted_into_dm[PMP_I])"
+    },
+    {
+      "slot": 193,
+      "group": "pmp_region_cg",
+      "instance": 3,
+      "kind": "gate",
+      "key": "pmp_region_cg/pmp_iside2_priv_bits_cross",
+      "expression": "g_pmp_fcov_signals.g_pmp_region_fcov[i_region].fcov_pmp_region_ichan2_access &&\n                 g_pmp_fcov_signals.fcov_pmp_region_ichan2_priority[i_region]                 &&\n                 csr_pmp_cfg[i_region].mode != PMP_MODE_OFF                                   &&\n                   !(fcov_access_attempted_into_dm[PMP_I2])"
+    },
+    {
+      "slot": 194,
+      "group": "pmp_region_cg",
+      "instance": 3,
+      "kind": "gate",
+      "key": "pmp_region_cg/pmp_dside_priv_bits_cross",
+      "expression": "g_pmp_fcov_signals.g_pmp_region_fcov[i_region].fcov_pmp_region_dchan_access &&\n                 g_pmp_fcov_signals.fcov_pmp_region_dchan_priority[i_region]                 &&\n                 csr_pmp_cfg[i_region].mode != PMP_MODE_OFF                                  &&\n                 !(fcov_access_attempted_into_dm[PMP_D])"
+    },
+    {
+      "slot": 195,
+      "group": "pmp_region_cg",
+      "instance": 3,
+      "kind": "value",
+      "key": "pmp_region_priv_bits",
+      "expression": "pmp_region_priv_bits"
+    },
+    {
+      "slot": 196,
+      "group": "pmp_region_cg",
+      "instance": 3,
+      "kind": "value",
+      "key": "pmp_region_priv_bits_wr",
+      "expression": "pmp_region_priv_bits_wr"
+    },
+    {
+      "slot": 197,
+      "group": "pmp_region_cg",
+      "instance": 3,
+      "kind": "value",
+      "key": "csr_pmp_mseccfg.rlb",
+      "expression": "csr_pmp_mseccfg.rlb"
+    },
+    {
+      "slot": 198,
+      "group": "pmp_region_cg",
+      "instance": 3,
+      "kind": "gate",
+      "key": "pmp_region_cg/pmp_wr_exec_region",
+      "expression": "fcov_csr_write &&\n             csr_pmp_mseccfg.mml &&\n             cs_registers_i.csr_we_int &&\n             cs_registers_i.csr_addr == (CSR_OFF_PMP_CFG + (i_region[11:0] >> 2)) &&\n             ((!pmp_region_priv_bits[2] && pmp_region_priv_bits != MML_XM_XU) ||\n              pmp_region_priv_bits inside {MML_WRM_WRU, MML_RM_RU})"
+    },
+    {
+      "slot": 199,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_rlb",
+      "expression": "csr_pmp_mseccfg.rlb"
+    },
+    {
+      "slot": 200,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_mmwp",
+      "expression": "csr_pmp_mseccfg.mmwp"
+    },
+    {
+      "slot": 201,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_mml",
+      "expression": "csr_pmp_mseccfg.mml"
+    },
+    {
+      "slot": 202,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_wdata_rlb",
+      "expression": "csr_wdata_mseccfg_rlb"
+    },
+    {
+      "slot": 203,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_wdata_mmwp",
+      "expression": "csr_wdata_mseccfg_mmwp"
+    },
+    {
+      "slot": 204,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_wdata_mml",
+      "expression": "csr_wdata_mseccfg_mml"
+    },
+    {
+      "slot": 205,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_priv_lvl_iside",
+      "expression": "g_pmp.pmp_priv_lvl[PMP_I]"
+    },
+    {
+      "slot": 206,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_req_type_iside",
+      "expression": "g_pmp.pmp_req_type[PMP_I]"
+    },
+    {
+      "slot": 207,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_priv_lvl_iside2",
+      "expression": "g_pmp.pmp_priv_lvl[PMP_I2]"
+    },
+    {
+      "slot": 208,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_req_type_iside2",
+      "expression": "g_pmp.pmp_req_type[PMP_I2]"
+    },
+    {
+      "slot": 209,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_priv_lvl_dside",
+      "expression": "g_pmp.pmp_priv_lvl[PMP_D]"
+    },
+    {
+      "slot": 210,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_req_type_dside",
+      "expression": "g_pmp.pmp_req_type[PMP_D]"
+    },
+    {
+      "slot": 211,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_pmp_iside_region_override",
+      "expression": "g_pmp.pmp_i.g_access_check[PMP_I].fcov_pmp_region_override"
+    },
+    {
+      "slot": 212,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "gate",
+      "key": "pmp_top_cg/cp_pmp_iside_region_override",
+      "expression": "if_stage_i.if_id_pipe_reg_we"
+    },
+    {
+      "slot": 213,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_pmp_iside2_region_override",
+      "expression": "g_pmp.pmp_i.g_access_check[PMP_I2].fcov_pmp_region_override"
+    },
+    {
+      "slot": 214,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "gate",
+      "key": "pmp_top_cg/cp_pmp_iside2_region_override",
+      "expression": "if_stage_i.if_id_pipe_reg_we"
+    },
+    {
+      "slot": 215,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_pmp_dside_region_override",
+      "expression": "g_pmp.pmp_i.g_access_check[PMP_D].fcov_pmp_region_override"
+    },
+    {
+      "slot": 216,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "gate",
+      "key": "pmp_top_cg/cp_pmp_dside_region_override",
+      "expression": "data_req_out"
+    },
+    {
+      "slot": 217,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_mprv",
+      "expression": "cs_registers_i.mstatus_q.mprv"
+    },
+    {
+      "slot": 218,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "dm_fetch_iside_debug_mode_cp",
+      "expression": "debug_mode"
+    },
+    {
+      "slot": 219,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "gate",
+      "key": "pmp_top_cg/dm_fetch_iside_debug_mode_cp",
+      "expression": "fcov_access_attempted_into_dm[PMP_I]"
+    },
+    {
+      "slot": 220,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "dm_fetch_iside2_debug_mode_cp",
+      "expression": "debug_mode"
+    },
+    {
+      "slot": 221,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "gate",
+      "key": "pmp_top_cg/dm_fetch_iside2_debug_mode_cp",
+      "expression": "fcov_access_attempted_into_dm[PMP_I2]"
+    },
+    {
+      "slot": 222,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "dm_load_store_debug_mode_cp",
+      "expression": "debug_mode"
+    },
+    {
+      "slot": 223,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "gate",
+      "key": "pmp_top_cg/dm_load_store_debug_mode_cp",
+      "expression": "fcov_access_attempted_into_dm[PMP_D]"
+    },
+    {
+      "slot": 224,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cp_ls_pmp_exception",
+      "expression": "load_store_unit_i.fcov_ls_pmp_exception"
+    },
+    {
+      "slot": 225,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "gate",
+      "key": "pmp_top_cg/rlb_csr_cross",
+      "expression": "fcov_csr_write && cs_registers_i.csr_addr_i == CSR_MSECCFG"
+    },
+    {
+      "slot": 226,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "gate",
+      "key": "pmp_top_cg/rlb_csr_cross/sticky",
+      "expression": "cs_registers_i.g_pmp_registers.any_pmp_entry_locked"
+    },
+    {
+      "slot": 227,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "gate",
+      "key": "pmp_top_cg/mmwp_csr_cross",
+      "expression": "fcov_csr_write && cs_registers_i.csr_addr_i == CSR_MSECCFG"
+    },
+    {
+      "slot": 228,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "gate",
+      "key": "pmp_top_cg/mml_sticky_cross",
+      "expression": "fcov_csr_write && cs_registers_i.csr_addr_i == CSR_MSECCFG"
+    },
+    {
+      "slot": 229,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "pmp_iside_req_err",
+      "expression": "pmp_iside_req_err"
+    },
+    {
+      "slot": 230,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "gate",
+      "key": "pmp_top_cg/pmp_iside_nomatch_cross",
+      "expression": "pmp_iside_nomatch"
+    },
+    {
+      "slot": 231,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "pmp_iside2_req_err",
+      "expression": "pmp_iside2_req_err"
+    },
+    {
+      "slot": 232,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "gate",
+      "key": "pmp_top_cg/pmp_iside2_nomatch_cross",
+      "expression": "pmp_iside2_nomatch"
+    },
+    {
+      "slot": 233,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "pmp_dside_req_err",
+      "expression": "pmp_dside_req_err"
+    },
+    {
+      "slot": 234,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "gate",
+      "key": "pmp_top_cg/pmp_dside_nomatch_cross",
+      "expression": "pmp_dside_nomatch"
+    },
+    {
+      "slot": 235,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cs_registers_i.mstatus_q.mpp",
+      "expression": "cs_registers_i.mstatus_q.mpp"
+    },
+    {
+      "slot": 236,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "cs_registers_i.priv_mode_id_o",
+      "expression": "cs_registers_i.priv_mode_id_o"
+    },
+    {
+      "slot": 237,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "pmp_current_priv_req_err",
+      "expression": "pmp_current_priv_req_err"
+    },
+    {
+      "slot": 238,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "gate",
+      "key": "pmp_top_cg/mprv_effect_cross",
+      "expression": "id_stage_i.instr_rdata_i[6:0] inside\n                                    {ibex_pkg::OPCODE_LOAD, ibex_pkg::OPCODE_STORE} &&\n                                  cs_registers_i.mstatus_q.mprv"
+    },
+    {
+      "slot": 239,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "if_stage_i.instr_is_compressed_out",
+      "expression": "if_stage_i.instr_is_compressed_out"
+    },
+    {
+      "slot": 240,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "gate",
+      "key": "pmp_top_cg/pmp_instr_edge_cross",
+      "expression": "pmp_iside_boundary_cross"
+    },
+    {
+      "slot": 241,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "misaligned_pmp_err_last",
+      "expression": "misaligned_pmp_err_last"
+    },
+    {
+      "slot": 242,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "load_store_unit_i.fcov_ls_mis_pmp_err_2",
+      "expression": "load_store_unit_i.fcov_ls_mis_pmp_err_2"
+    },
+    {
+      "slot": 243,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "gate",
+      "key": "pmp_top_cg/misaligned_lsu_access_cross",
+      "expression": "pmp_dside_boundary_cross"
+    },
+    {
+      "slot": 244,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "pmp_iside_access_fault_check",
+      "expression": "pmp_iside_access_fault_check"
+    },
+    {
+      "slot": 245,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "pmp_iside2_access_fault_check",
+      "expression": "pmp_iside2_access_fault_check"
+    },
+    {
+      "slot": 246,
+      "group": "pmp_top_cg",
+      "instance": null,
+      "kind": "value",
+      "key": "pmp_dside_access_fault_check",
+      "expression": "pmp_dside_access_fault_check"
+    }
+  ]
+}

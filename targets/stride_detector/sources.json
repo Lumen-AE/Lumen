@@ -1,0 +1,9 @@
+{
+  "top": "stride_detector",
+  "files": [
+    "rtl/stride_detector.sv"
+  ],
+  "include_dirs": [
+    "rtl"
+  ]
+}

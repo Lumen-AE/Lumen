@@ -1,0 +1,11 @@
+{
+  "top": "ibex_decoder_wrap",
+  "files": [
+    "rtl/ibex_pkg.sv",
+    "rtl/ibex_decoder.sv",
+    "rtl/ibex_decoder_wrap.sv"
+  ],
+  "include_dirs": [
+    "rtl"
+  ]
+}

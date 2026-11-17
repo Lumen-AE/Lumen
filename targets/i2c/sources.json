@@ -1,0 +1,9 @@
+{
+  "top": "i2c_slave",
+  "files": [
+    "rtl/i2c_slave.v"
+  ],
+  "include_dirs": [
+    "rtl"
+  ]
+}

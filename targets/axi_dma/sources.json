@@ -1,0 +1,11 @@
+{
+  "top": "axi_dma",
+  "files": [
+    "rtl/axi_dma.v",
+    "rtl/axi_dma_rd.v",
+    "rtl/axi_dma_wr.v"
+  ],
+  "include_dirs": [
+    "rtl"
+  ]
+}

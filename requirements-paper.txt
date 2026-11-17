@@ -1,0 +1,2 @@
+yowasp-yosys==0.71.0.0.post1285
+z3-solver==4.13.4.0

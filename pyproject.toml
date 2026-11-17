@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lumen-ibex"
+version = "0.6.0"
+description = "Evidence-guided RTL verification framework"
+readme = "readme.md"
+license = "Apache-2.0"
+license-files = ["LICENSE", "readme.md", "licenses/*.txt"]
+requires-python = ">=3.10"
+dependencies = ["cocotb==1.9.2", "pyzmq==27.2.0"]
+
+[project.optional-dependencies]
+paper = ["yowasp-yosys==0.71.0.0.post1285", "z3-solver==4.13.4.0"]
+
+[project.scripts]
+lumen = "lumen.commands.operator:main"
+lumen-run = "lumen.commands.serve:main"
+lumen-api = "lumen.commands.api:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["lumen*"]

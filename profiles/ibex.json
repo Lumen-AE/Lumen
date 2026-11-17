@@ -1,0 +1,6 @@
+{
+  "current": {"WritebackStage": 0, "PMPEnable": 0, "PMPNumRegions": 4, "ICache": 0, "SecureIbex": 0},
+  "wb_only": {"WritebackStage": 1, "PMPEnable": 0, "PMPNumRegions": 4, "ICache": 0, "SecureIbex": 0},
+  "pmp_only": {"WritebackStage": 0, "PMPEnable": 1, "PMPNumRegions": 4, "ICache": 0, "SecureIbex": 0},
+  "wb_pmp": {"WritebackStage": 1, "PMPEnable": 1, "PMPNumRegions": 4, "ICache": 0, "SecureIbex": 0}
+}

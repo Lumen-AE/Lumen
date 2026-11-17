@@ -1,0 +1,17 @@
+{
+  "top": "sm4_top",
+  "files": [
+    "rtl/get_cki.v",
+    "rtl/key_expansion.v",
+    "rtl/one_round_for_encdec.v",
+    "rtl/one_round_for_key_exp.v",
+    "rtl/sbox_replace.v",
+    "rtl/sm4_encdec.v",
+    "rtl/sm4_top.v",
+    "rtl/transform_for_encdec.v",
+    "rtl/transform_for_key_exp.v"
+  ],
+  "include_dirs": [
+    "rtl"
+  ]
+}

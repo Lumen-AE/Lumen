@@ -1,7 +1,7 @@
 {
   "project": "Lumen",
   "stage": "local_modified",
-  "previous_manifest_sha256": "0e6802a3d1021ba595b95b966d2424caf69b435c2378c289ef2529b0e872ce5d",
+  "previous_manifest_sha256": "fd0099cf96d4c2d4373ecd6d8e48ea8ca054f9f73037d5f77e44c6517590c3a4",
   "catalog_sha256": "619a6baaf8d33d8e4698b218ed72a3d7f25ac971c6d7058a22918c1a93d516fe",
   "files": [
     {
@@ -86,8 +86,8 @@
     },
     {
       "path": "readme.md",
-      "bytes": 2424,
-      "sha256": "e451de64fe3c105ce3f130c46d759974263d66eafd8b61360c452bbd0311a4d7"
+      "bytes": 6620,
+      "sha256": "aa822195b340d7103d2a4489fd470cfca0305b6ce3bef8d03bd0b2c379b94a53"
     },
     {
       "path": "requirements-paper.txt",
